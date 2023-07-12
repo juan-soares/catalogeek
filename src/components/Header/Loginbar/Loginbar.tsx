@@ -1,14 +1,24 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import StyledLoginbar from "./Loginbar.styled";
 
 export function Loginbar() {
-  return (
-    <div>
-      <Link to="/login">
-        <button>Login</button>
-      </Link>
+  const [user, setUser] = useState("");
 
-      <span>Nickname</span>
-      <button>Sair</button>
-    </div>
+  return (
+    <StyledLoginbar>
+      {!user && (
+        <Link to="/login">
+          <button>Login</button>
+        </Link>
+      )}
+
+      {user && (
+        <>
+          <span>Nickname</span>
+          <button onClick={() => setUser("")}>Sair</button>
+        </>
+      )}
+    </StyledLoginbar>
   );
 }

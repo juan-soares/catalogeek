@@ -1,13 +1,17 @@
 import { Logo, ExternalLinks, Searchbar, Loginbar } from "../Header";
-import StyledHeader from "./Header.styled";
+import StyledHeader, { ContainerTop } from "./Header.styled";
+import { Navbar } from "./Navbar/Navbar";
 
 export function Header() {
   return (
     <StyledHeader>
-      <Logo />
-      <ExternalLinks />
-      <Searchbar />
-      <Loginbar />
+      <ContainerTop>
+        <Logo />
+        <ExternalLinks />
+        <Searchbar />
+        <Loginbar />
+      </ContainerTop>
+      <Navbar />
     </StyledHeader>
   );
 }

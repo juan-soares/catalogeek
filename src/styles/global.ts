@@ -12,10 +12,6 @@ const GlobalStyle = createGlobalStyle`
       text-decoration: none;
   }
   
-  input{
-      padding: 5px;
-  }
-  
   button {
       padding: 5px;
       
@@ -23,6 +19,15 @@ const GlobalStyle = createGlobalStyle`
       cursor: pointer;
       }
   }
+  
+  input {
+      padding: 5px;
+  }
+  
+  ul {
+      list-style: none;
+  }
+  
 `;
 
 export default GlobalStyle;

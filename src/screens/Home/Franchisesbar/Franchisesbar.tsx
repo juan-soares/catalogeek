@@ -1,0 +1,82 @@
+import StyledFranchisebar from "./Franchisebar.styled";
+
+export function Franchisesbar() {
+  return (
+    <StyledFranchisebar>
+      <button>+</button>
+      <button className="nav-button">L</button>
+      <nav>
+        <ul>
+          <li>
+            <img
+              src="https://logospng.org/download/marvel/logo-marvel-1536.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/DC_Comics_logo.png/768px-DC_Comics_logo.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
+              alt=""
+            />
+          </li>
+          <li>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
+              alt=""
+            />
+          </li>
+        </ul>
+      </nav>
+
+      <button className="nav-button">R</button>
+    </StyledFranchisebar>
+  );
+}

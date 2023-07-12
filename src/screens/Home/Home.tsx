@@ -1,3 +1,9 @@
+import { Franchisesbar } from "./Franchisesbar";
+
 export function ScreenHome() {
-  return <div></div>;
+  return (
+    <div>
+      <Franchisesbar />
+    </div>
+  );
 }
