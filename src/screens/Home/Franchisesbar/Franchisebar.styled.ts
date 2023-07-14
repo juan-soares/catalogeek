@@ -7,7 +7,7 @@ const StyledFranchisebar = styled.div`
   width: 100%;
   gap: 10px;
 
-  button {
+  .add-button {
     color: white;
   }
 
@@ -16,7 +16,7 @@ const StyledFranchisebar = styled.div`
     color: black;
     padding 0;
     width: 30px;
-    height: 60px;
+    height: 100px;
     
     :hover {
         background-color: black;
@@ -26,8 +26,8 @@ const StyledFranchisebar = styled.div`
 
   button,
   li {
-    width: 100px;
-    height: 60px;
+    width: 140px;
+    height: 100px;
     border: 2px solid grey;
     border-radius: 10px;
     background-color: black;
@@ -44,12 +44,15 @@ const StyledFranchisebar = styled.div`
     width: 100%;
     justify-content: space-between;
     overflow: hidden;
-
+    
     ul {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      gap: 45px;
+      gap: 20px;
+      position: relative;
+      right: ${(props) => props.pixel}px;
+      transition: right 1s;
 
       button {
         background-color: unset;
@@ -59,12 +62,27 @@ const StyledFranchisebar = styled.div`
         border: 2px solid grey;
         border-radius: 10px;
         background-color: black;
-
-        img {
+        
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           width: 100%;
           height: 100%;
+        
+          img {
+          width: 80%;
+          height: 80%;
+          display: block;
+          transition: transform 1s;
+
+          :hover {
+            transform: scale(1.09);
+          }
+          }
+
         }
-      }
+              }
     }
   }
 `;

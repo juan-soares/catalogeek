@@ -1,82 +1,79 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import StyledFranchisebar from "./Franchisebar.styled";
 
 export function Franchisesbar() {
+  const [franchiseList, setFranchiseList] = useState([
+    {
+      originalTitle: "teste",
+      logo: "https://logopng.com.br/logos/google-37.png",
+    },
+    {
+      originalTitle: "teste",
+      logo: "https://logopng.com.br/logos/google-37.png",
+    },
+    {
+      originalTitle: "teste",
+      logo: "https://logopng.com.br/logos/google-37.png",
+    },
+    {
+      originalTitle: "teste",
+      logo: "https://logopng.com.br/logos/google-37.png",
+    },
+    {
+      originalTitle: "teste",
+      logo: "https://logopng.com.br/logos/google-37.png",
+    },
+    {
+      originalTitle: "teste",
+      logo: "https://logopng.com.br/logos/google-37.png",
+    },
+    {
+      originalTitle: "teste",
+      logo: "https://logopng.com.br/logos/google-37.png",
+    },
+    {
+      originalTitle: "teste",
+      logo: "https://logopng.com.br/logos/google-37.png",
+    },
+    {
+      originalTitle: "teste",
+      logo: "https://logopng.com.br/logos/google-37.png",
+    },
+    {
+      originalTitle: "teste",
+      logo: "",
+    },
+  ]);
+  const [pixel, setPixel] = useState(0);
+
   return (
-    <StyledFranchisebar>
-      <button>+</button>
-      <button className="nav-button">L</button>
+    <StyledFranchisebar pixel={pixel}>
+      <button className="add-button">+</button>
+      <button
+        className="nav-button"
+        onClick={() => {
+          if (pixel > 0) {
+            setPixel(pixel - 140);
+          }
+        }}
+      >
+        L
+      </button>
       <nav>
         <ul>
-          <li>
-            <img
-              src="https://logospng.org/download/marvel/logo-marvel-1536.png"
-              alt=""
-            />
-          </li>
-          <li>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/DC_Comics_logo.png/768px-DC_Comics_logo.png"
-              alt=""
-            />
-          </li>
-          <li>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
-              alt=""
-            />
-          </li>
-          <li>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
-              alt=""
-            />
-          </li>
-          <li>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
-              alt=""
-            />
-          </li>
-          <li>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
-              alt=""
-            />
-          </li>
-          <li>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
-              alt=""
-            />
-          </li>
-          <li>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
-              alt=""
-            />
-          </li>
-          <li>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
-              alt=""
-            />
-          </li>
-          <li>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
-              alt=""
-            />
-          </li>
-          <li>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/pt/0/0c/The_Lord_of_the_Rings_logo.png"
-              alt=""
-            />
-          </li>
+          {franchiseList.map(({ originalTitle, logo }) => (
+            <li>
+              <Link to={`${originalTitle}`}>
+                <img src={logo} alt={`logo ${originalTitle}`} />
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
-
-      <button className="nav-button">R</button>
+      <button className="nav-button" onClick={() => setPixel(pixel + 140)}>
+        R
+      </button>
     </StyledFranchisebar>
   );
 }
